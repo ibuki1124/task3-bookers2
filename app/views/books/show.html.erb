@@ -33,7 +33,7 @@
 <h2>Book detail</h2>
 <table>
   <tbody>
-    <td></td> <!-- 未実装 -->
+    <td><%= image_tag @user.get_profile_image(100, 100) %></td>
     <td><%= @book.title %></td>
     <td><%= @book.body %></td>
     <td><%= link_to "Edit", edit_book_path(@book) %></td>
