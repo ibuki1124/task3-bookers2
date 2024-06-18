@@ -1,5 +1,5 @@
 <h2>New Book</h2>
-<%= form_with model: @book do |f| %>
+<%= form_with model: @book_new do |f| %>
   <div>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -14,3 +14,14 @@
     <%= f.submit "Create Book" %>
   </div>
 <% end %>
+
+<h2>Book detail</h2>
+<table>
+  <tbody>
+    <td></td> <!-- 未実装 -->
+    <td><%= @book.title %></td>
+    <td><%= @book.body %></td>
+    <td></td><!-- 未実装 -->
+    <td></td><!-- 未実装 -->
+  </tbody>
+</table>
