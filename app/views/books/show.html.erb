@@ -14,22 +14,7 @@
 </table>
 <%= link_to "edit", edit_user_path(@user) %>
 
-<h2>New Book</h2>
-<%= form_with model: @book_new do |f| %>
-  <div>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  
-  <div>
-    <%= f.label "Opinion" %><br>
-    <%= f.text_area :body %>
-  </div>
-  
-  <div>
-    <%= f.submit "Create Book" %>
-  </div>
-<% end %>
+<%= render "new_book", book: @book_new %>
 
 <h2>Book detail</h2>
 <table>
