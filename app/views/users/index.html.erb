@@ -15,7 +15,7 @@
 <%= link_to "edit", edit_user_path(@user) %>
 
 <h2>New Book</h2>
-<%= form_with model: @book_new do |f| %>
+<%= form_with model: @book do |f| %>
   <div>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
