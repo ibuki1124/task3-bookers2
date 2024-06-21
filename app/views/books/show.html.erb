@@ -5,7 +5,12 @@
 <h2>Book detail</h2>
 <table>
   <tbody>
-    <td><%= image_tag @user.get_profile_image(100, 100) %></td>
+    <td>
+      <%= link_to user_path(@book.user) do %>
+       <%= image_tag @user.get_profile_image(100, 100) %>
+       <%= @book.user.name %>
+     <% end %>
+    </td>
     <td><%= @book.title %></td>
     <td><%= @book.body %></td>
     <% if @user == current_user %>
